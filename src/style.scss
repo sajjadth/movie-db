@@ -1,0 +1,59 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(220, 220, 220);
+}
+::-webkit-scrollbar-thumb {
+  background: #999;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+* {
+  scrollbar-width: thin;
+  text-transform: capitalize;
+  #input {
+    min-height: 25vh;
+    .button {
+      width: 38px;
+    }
+  }
+  #output {
+    min-height: 75vh;
+    .imdb {
+      background-color: #f5de50;
+    }
+    .metacritic {
+      background-color: #111111;
+      color: white;
+    }
+    .rotten-tomatoes {
+      background-color: #fa320a;
+      color: white;
+    }
+    #table {
+      width: 100% !important;
+      .table-head {
+        padding: 0 10px 0 0;
+      }
+    }
+  }
+}
+.container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
