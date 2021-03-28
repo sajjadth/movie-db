@@ -1,18 +1,6 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 import $ from "jquery";
 
-/*
-select(state, action) {
-  if (e === "#/movie") {
-    $("#dropdown-basic").text("movie");
-  } else if (e === "#/series") {
-    $("#dropdown-basic").text("series");
-  } else if (e === "#/episode") {
-    $("#dropdown-basic").text("episode");
-  }
-}
-*/
-
 const searchSlice = createSlice({
   name: "search",
   initialState: {
