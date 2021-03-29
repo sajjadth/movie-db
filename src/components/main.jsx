@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Input from "./input";
 import Output from "./output";
 import Loading from "./loading";
+import NotFound from "./not found";
 
 class Main extends React.Component {
   render() {
@@ -11,10 +12,8 @@ class Main extends React.Component {
         <Input />
         {this.props.loading === "loading" ? (
           <Loading />
-        ) : this.props.data.Error === "Movie not found!" ? (
-          <h1 className="text-center">Movie not found!</h1>
-        ) : this.props.data.Error === "Series not found!" ? (
-          <h1 className="text-center">Series not found!</h1>
+        ) : this.props.data.Response === "False" ? (
+          <NotFound />
         ) : this.props.loading === "done" ? (
           <Output />
         ) : null}

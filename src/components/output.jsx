@@ -10,30 +10,32 @@ class Output extends React.Component {
           className="rounded d-flex flex-md-row flex-column container "
           id="output"
         >
-          <div>
+          <div id="img" className="m-2">
             <img
-              className="rounded m-3"
+              className="rounded"
               src={this.props.data.Poster}
               title={this.props.data.Title}
               alt={this.props.data.Title}
             />
           </div>
-          <div className="mt-3">
+          <div className="m-2">
             <h1>
               {this.props.data.Title} {this.props.data.Year}
             </h1>
-            <div className="d-flex flex-row">
-              <p className="badge badge-pill badge-info m-1">
-                {this.props.data.Rated}
-              </p>
-              <p className="badge badge-pill badge-info m-1">
-                {this.props.data.Released}
-              </p>
-              <p className="badge badge-pill badge-info m-1">
-                {this.props.data.Runtime}
-              </p>
+            <div className="d-flex flex-md-row flex-column">
+              <div className="d-flex flex-row" id="details">
+                <p className="badge badge-pill badge-info m-1">
+                  {this.props.data.Rated}
+                </p>
+                <p className="badge badge-pill badge-info m-1">
+                  {this.props.data.Released}
+                </p>
+                <p className="badge badge-pill badge-info m-1">
+                  {this.props.data.Runtime}
+                </p>
+              </div>
+              <div className="d-flex flex-row" id="rate"></div>
             </div>
-            <div className="d-flex flex-row" id="rate"></div>
             <table className="" id="table">
               <tbody className="" id="table">
                 <tr>
