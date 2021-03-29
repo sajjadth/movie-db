@@ -48,7 +48,7 @@ export const fetchData = (e) => async (dispatch) => {
   const response = await fetch(fetchLink);
   const data = await response.json();
   if (response.status === 200) {
-    setTimeout(() => dispatch(dataReceived(data)), 2000);
+    setTimeout(() => dispatch(dataReceived(data)), 3000);
   }
 };
 

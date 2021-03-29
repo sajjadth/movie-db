@@ -1,14 +1,17 @@
 import React from "react";
+import { connect } from "react-redux";
 import Input from "./input";
 import Output from "./output";
-import { connect } from "react-redux";
+import Loading from "./loading";
 
 class Main extends React.Component {
   render() {
     return (
       <React.Fragment>
         <Input />
-        {this.props.data.Error === "Movie not found!" ? (
+        {this.props.loading === "loading" ? (
+          <Loading />
+        ) : this.props.data.Error === "Movie not found!" ? (
           <h1 className="text-center">Movie not found!</h1>
         ) : this.props.data.Error === "Series not found!" ? (
           <h1 className="text-center">Series not found!</h1>
