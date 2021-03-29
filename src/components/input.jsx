@@ -8,7 +8,7 @@ class Input extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container-sm">
+        <div className="container-sm mt-2 mb-2">
           <div
             className="rounded d-flex justify-content-center align-items-center row"
             id="input"
@@ -37,7 +37,7 @@ class Input extends React.Component {
                 onSelect={(e) => store.dispatch(selectValue(e))}
               >
                 <Dropdown.Toggle
-                  variant="outline-dark"
+                  variant="dark"
                   id="dropdown-basic"
                   className="col bg-outline-dark"
                 >

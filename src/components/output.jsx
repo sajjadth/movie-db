@@ -7,7 +7,7 @@ class Output extends React.Component {
     return (
       <React.Fragment>
         <div
-          className="rounded d-flex flex-md-row flex-column container "
+          className="rounded d-flex flex-md-row flex-column container mt-2 mb-2"
           id="output"
         >
           <div id="img" className="m-2">

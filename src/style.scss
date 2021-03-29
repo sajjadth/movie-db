@@ -19,80 +19,97 @@
 * {
   scrollbar-width: thin;
   text-transform: capitalize;
-  #not-found-img {
-    width: 100px;
-    height: 100px;
-  }
-  #input {
-    min-height: 25vh;
-    .button {
-      width: 38px;
+  body {
+    background: url(../asset/mohammad-alizade-XgeZu2jBaVI-unsplash.jpg);
+    #not-found-img {
+      width: 100px;
+      height: 100px;
     }
-  }
-  #output {
-    min-height: 75vh;
-    #img {
-      min-width: 300px;
+    #input {
+      min-height: 25vh;
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 15px !important;
+      .button {
+        width: 38px;
+      }
     }
-    .imdb {
-      background-color: #f5de50;
-    }
-    .metacritic {
-      background-color: #111111;
-      color: white;
-    }
-    .rotten-tomatoes {
-      background-color: #fa320a;
-      color: white;
-    }
-    #rate,
-    #details {
-      margin-left: -4px;
-    }
-    #table {
-      width: 100% !important;
-      .table-head {
-        padding: 0 10px 0 0;
-        display: flex;
-        justify-content: start;
+    #output {
+      min-height: 70vh;
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 15px !important;
+      #img {
+        min-width: 300px;
+      }
+      .imdb {
+        background-color: #f5de50;
+      }
+      .metacritic {
+        background-color: #111111;
+        color: white;
+      }
+      .rotten-tomatoes {
+        background-color: #fa320a;
+        color: white;
+      }
+      #rate,
+      #details {
+        margin-left: -4px;
+      }
+      #table {
+        width: 100% !important;
+        .table-head {
+          padding: 0 10px 0 0;
+          display: flex;
+          justify-content: start;
+        }
       }
     }
   }
-}
-.container {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 
-//loading page style
-@keyframes move {
-  0% {
-    left: 0;
-    opacity: 0;
-  }
-  35% {
-    left: 41%;
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  65% {
-    left: 59%;
-    -moz-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    left: 100%;
-    -moz-transform: rotate(-180deg);
-    -webkit-transform: rotate(-180deg);
-    -o-transform: rotate(-180deg);
-    transform: rotate(-180deg);
-    opacity: 0;
+  //loading page style
+  @keyframes move {
+    0% {
+      left: 0;
+      opacity: 0;
+    }
+    35% {
+      left: 41%;
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    65% {
+      left: 59%;
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      left: 100%;
+      -moz-transform: rotate(-180deg);
+      -webkit-transform: rotate(-180deg);
+      -o-transform: rotate(-180deg);
+      transform: rotate(-180deg);
+      opacity: 0;
+    }
   }
 }
 
