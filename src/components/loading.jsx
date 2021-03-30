@@ -5,13 +5,13 @@ class Loading extends React.Component {
     return (
       <React.Fragment>
         <div id="load">
-          <div>G</div>
-          <div>N</div>
-          <div>I</div>
-          <div>D</div>
-          <div>A</div>
-          <div>O</div>
-          <div>L</div>
+          <div className="mode">G</div>
+          <div className="mode">N</div>
+          <div className="mode">I</div>
+          <div className="mode">D</div>
+          <div className="mode">A</div>
+          <div className="mode">O</div>
+          <div className="mode">L</div>
         </div>
       </React.Fragment>
     );

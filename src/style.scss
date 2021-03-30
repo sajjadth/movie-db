@@ -1,5 +1,20 @@
 //bootstrap icons cdn
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
+$border: 1px solid blue;
+@mixin form {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff !important;
+  background-clip: padding-box;
+  border: 1px solid #ced4da !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
 
 //scrollbar style
 ::-webkit-scrollbar {
@@ -19,34 +34,83 @@
 * {
   scrollbar-width: thin;
   text-transform: capitalize;
+  .light-mode {
+    background: url(../asset/light.svg);
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+  }
+  .text-light {
+    color: white;
+  }
+  .dark-mode {
+    background: url(../asset//dark.svg);
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+  }
+  .text-dark {
+    color: #222222;
+  }
   body {
-    background: url(../asset/mohammad-alizade-XgeZu2jBaVI-unsplash.jpg);
+    #side {
+      position:absolute;
+      left: 0;
+      right: 0;
+      #side-mode-btn {
+        width: 25px;
+        height: 25px;
+      }
+    }
     #not-found-img {
       width: 100px;
       height: 100px;
     }
     #input {
       min-height: 25vh;
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 15px !important;
+      min-width: 100%;
+      z-index: 0;
       .button {
         width: 38px;
       }
+
+      #submit {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        width: 50px !important;
+        height: 38px !important;
+        //border: $border;
+        @include form();
+      }
+      #submit:focus,
+      #title:focus,
+      .btn-flat:focus {
+        box-shadow: transparent !important;
+        outline: none !important;
+      }
+      .btn-flat {
+        border-top: $border !important;
+        border-bottom: $border !important;
+        @include form();
+      }
+      #title {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        //border: $border;
+      }
     }
     #output {
-      min-height: 70vh;
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 15px !important;
+      min-height: 75vh;
       #img {
         min-width: 300px;
       }

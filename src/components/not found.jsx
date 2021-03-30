@@ -16,11 +16,20 @@ class NotFound extends React.Component {
     return (
       <React.Fragment>
         <div className="d-flex flex-column w-100 align-items-center justify-content-center">
-          <img src={randomNumber(0, gifs.length)} id="not-found-img" />
+          <img
+            src={
+              this.props.data.Error === "Incorrect IMDb ID."
+                ? gifs[2]
+                : randomNumber(0, gifs.length)
+            }
+            id="not-found-img"
+          />
           {this.props.data.Error === "Movie not found!" ? (
-            <h1 className="text-center">Movie not found!</h1>
+            <h1 className="text-center mode">Movie not found!</h1>
           ) : this.props.data.Error === "Series not found!" ? (
-            <h1 className="text-center">Series not found!</h1>
+            <h1 className="text-center mode">Series not found!</h1>
+          ) : this.props.data.Error === "Incorrect IMDb ID." ? (
+            <h1 className="text-center mode">write something</h1>
           ) : null}
         </div>
       </React.Fragment>

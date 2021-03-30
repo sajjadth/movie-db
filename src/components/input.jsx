@@ -3,17 +3,17 @@ import React from "react";
 import { Dropdown } from "react-bootstrap";
 import { fetchData, store, selectValue } from "../reducer";
 import { connect } from "react-redux";
-
+selectValue
 class Input extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container-sm mt-2 mb-2">
+        <div className="container-sm">
           <div
-            className="rounded d-flex justify-content-center align-items-center row"
+            className=" d-flex justify-content-center align-items-center row"
             id="input"
           >
-            <form
+            {/*<form
               className="row col-md-6"
               onSubmit={(e) => store.dispatch(submit(e))}
             >
@@ -58,6 +58,41 @@ class Input extends React.Component {
               >
                 <i className="bi bi-search"></i>
               </button>
+            </form>*/}
+            <form
+              className="col-10 d-flex flex-row"
+              onSubmit={(e) => store.dispatch(submit(e))}
+              id="form"
+            >
+                <input
+                  type="text"
+                  placeholder="enter title"
+                  className="form-control"
+                  id="title"
+                />
+                <Dropdown onSelect={(e) => store.dispatch(selectValue(e))}>
+                  <Dropdown.Toggle
+                    variant="flat"
+                    id="dropdown-basic"
+                    className="rounded-0 h-100"
+                  >
+                    Select
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="#/movie">movie</Dropdown.Item>
+                    <Dropdown.Item href="#/series">series</Dropdown.Item>
+                    <Dropdown.Item href="#/episode">episode</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+                <button
+                  type="submit"
+                  className="btn button"
+                  id="submit"
+                  onClick={(e) => store.dispatch(fetchData(e))}
+                >
+                  <i className="bi bi-search"></i>
+                </button>
             </form>
           </div>
         </div>

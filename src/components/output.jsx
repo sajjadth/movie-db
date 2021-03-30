@@ -6,10 +6,7 @@ class Output extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div
-          className="rounded d-flex flex-md-row flex-column container mt-2 mb-2"
-          id="output"
-        >
+        <div className="d-flex flex-md-row flex-column container" id="output">
           <div id="img" className="m-2">
             <img
               className="rounded"
@@ -19,7 +16,7 @@ class Output extends React.Component {
             />
           </div>
           <div className="m-2">
-            <h1>
+            <h1 className="mode">
               {this.props.data.Title} {this.props.data.Year}
             </h1>
             <div className="d-flex flex-md-row flex-column">
@@ -38,33 +35,33 @@ class Output extends React.Component {
             </div>
             <table className="" id="table">
               <tbody className="" id="table">
-                <tr>
-                  <th className="table-head">genre</th>
-                  <td>{this.props.data.Genre}</td>
+                <tr id="genre">
+                  <th className="table-head mode">genre</th>
+                  <td className="mode">{this.props.data.Genre}</td>
                 </tr>
-                <tr>
-                  <th className="table-head">director</th>
-                  <td>{this.props.data.Director}</td>
+                <tr id="director">
+                  <th className="table-head mode">director</th>
+                  <td className="mode">{this.props.data.Director}</td>
                 </tr>
-                <tr>
-                  <th className="table-head">writer</th>
-                  <td>{this.props.data.Writer}</td>
+                <tr id="writer">
+                  <th className="table-head mode">writer</th>
+                  <td className="mode">{this.props.data.Writer}</td>
                 </tr>
-                <tr>
-                  <th className="table-head">actors</th>
-                  <td>{this.props.data.Actors}</td>
+                <tr id="actors">
+                  <th className="table-head mode">actors</th>
+                  <td className="mode">{this.props.data.Actors}</td>
                 </tr>
-                <tr>
-                  <th className="table-head">Language</th>
-                  <td>{this.props.data.Language}</td>
+                <tr id="language">
+                  <th className="table-head mode">Language</th>
+                  <td className="mode">{this.props.data.Language}</td>
                 </tr>
-                <tr>
-                  <th className="table-head">Country</th>
-                  <td>{this.props.data.Country}</td>
+                <tr id="country">
+                  <th className="table-head mode">Country</th>
+                  <td className="mode">{this.props.data.Country}</td>
                 </tr>
-                <tr>
-                  <th className="table-head">story</th>
-                  <td>{this.props.data.Plot}</td>
+                <tr id="story">
+                  <th className="table-head mode">story</th>
+                  <td className="mode">{this.props.data.Plot}</td>
                 </tr>
               </tbody>
             </table>
@@ -80,7 +77,7 @@ class Output extends React.Component {
       $("#rate").append(() => {
         return `
           <p class="${classes} ${
-          rate.Source === "Internet Movie Database" ? "imdb" : ""
+          rate.Source === "Internet Movie Database" ? "imdb text-dark" : ""
         } ${rate.Source === "Rotten Tomatoes" ? "rotten-tomatoes" : ""} ${
           rate.Source === "Metacritic" ? "metacritic" : ""
         }" data-toggle="tooltip" data-placement="left" title="${
@@ -91,7 +88,7 @@ class Output extends React.Component {
   `;
       })
     );
-    return elm;
+    return elm
   }
 }
 
