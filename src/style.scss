@@ -36,24 +36,20 @@ $border: 1px solid blue;
   text-transform: capitalize;
   .light-mode {
     background: url(../asset/light.svg);
-    background-repeat:no-repeat;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover;
-    background-position:center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
   }
   .text-light {
     color: white;
   }
   .dark-mode {
     background: url(../asset//dark.svg);
-    background-repeat:no-repeat;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    background-size:cover;
-    background-position:center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
   }
   .text-dark {
     color: #222222;
@@ -93,7 +89,7 @@ $border: 1px solid blue;
       #submit:focus,
       #title:focus,
       .btn-flat:focus {
-        box-shadow: transparent !important;
+        box-shadow: none !important;
         outline: none !important;
       }
       .btn-flat {
