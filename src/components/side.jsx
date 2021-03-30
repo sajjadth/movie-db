@@ -32,15 +32,24 @@ class Side extends React.Component {
               <i className="bi bi-moon-fill mode"></i>
             </button>
           ) : null}
-          <button className={this.handleClasses()} id="side-mode-btn">
-            <i class="bi bi-envelope-fill"></i>
-          </button>
-          <button className={this.handleClasses()} id="side-mode-btn">
-            <i class="bi bi-github"></i>
-          </button>
-          <button className={this.handleClasses()} id="side-mode-btn">
-            <i class="bi bi-twitter"></i>
-          </button>
+          <a href="mailto:st.655.st@gmail.com" target="__blank">
+            <button className={this.handleClasses()} id="side-mode-btn">
+              <i class="bi bi-envelope-fill"></i>
+            </button>
+          </a>
+          <a href="https://github.com/sajjadth/" target="__blank">
+            <button className={this.handleClasses()} id="side-mode-btn">
+              <i class="bi bi-github"></i>
+            </button>
+          </a>
+          <a
+            href="https://i.giphy.com/media/13HgwGsXF0aiGY/giphy.webp"
+            target="__blank"
+          >
+            <button className={this.handleClasses()} id="side-mode-btn">
+              <i class="bi bi-linkedin"></i>
+            </button>
+          </a>
         </div>
       </React.Fragment>
     );

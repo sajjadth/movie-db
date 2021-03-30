@@ -7,7 +7,7 @@ class Output extends React.Component {
     return (
       <React.Fragment>
         <div className="d-flex flex-md-row flex-column container" id="output">
-          <div id="img" className="m-2">
+          <div id="img" className="m-2 text-center">
             <img
               className="rounded"
               src={this.props.data.Poster}
@@ -16,11 +16,14 @@ class Output extends React.Component {
             />
           </div>
           <div className="m-2">
-            <h1 className="mode">
-              {this.props.data.Title} {this.props.data.Year}
-            </h1>
+              <h1 className="mode">
+                {this.props.data.Title} {this.props.data.Year}
+              </h1>
             <div className="d-flex flex-md-row flex-column">
-              <div className="d-flex flex-row" id="details">
+              <div
+                className="d-flex flex-row"
+                id="details"
+              >
                 <p className="badge badge-pill badge-info m-1">
                   {this.props.data.Rated}
                 </p>
@@ -31,7 +34,10 @@ class Output extends React.Component {
                   {this.props.data.Runtime}
                 </p>
               </div>
-              <div className="d-flex flex-row" id="rate"></div>
+              <div
+                className="d-flex flex-row"
+                id="rate"
+              ></div>
             </div>
             <table className="" id="table">
               <tbody className="" id="table">
@@ -88,7 +94,7 @@ class Output extends React.Component {
   `;
       })
     );
-    return elm
+    return elm;
   }
 }
 

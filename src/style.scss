@@ -59,6 +59,9 @@ $border: 1px solid blue;
       position: absolute;
       left: 0;
       right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       #side-mode-btn {
         width: 25px;
         height: 25px;
@@ -85,13 +88,13 @@ $border: 1px solid blue;
         height: 38px !important;
         //border: $border;
         @include form();
-      }
+      }/*
       #submit:focus,
       #title:focus,
       .btn-flat:focus {
         box-shadow: none !important;
         outline: none !important;
-      }
+      }*/
       .btn-flat {
         border-top: $border !important;
         border-bottom: $border !important;
