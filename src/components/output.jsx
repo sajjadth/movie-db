@@ -16,14 +16,11 @@ class Output extends React.Component {
             />
           </div>
           <div className="m-2">
-              <h1 className="mode">
-                {this.props.data.Title} {this.props.data.Year}
-              </h1>
+            <h1 className="mode">
+              {this.props.data.Title} {this.props.data.Year}
+            </h1>
             <div className="d-flex flex-md-row flex-column">
-              <div
-                className="d-flex flex-row"
-                id="details"
-              >
+              <div className="d-flex flex-row" id="details">
                 <p className="badge badge-pill badge-info m-1">
                   {this.props.data.Rated}
                 </p>
@@ -34,10 +31,7 @@ class Output extends React.Component {
                   {this.props.data.Runtime}
                 </p>
               </div>
-              <div
-                className="d-flex flex-row"
-                id="rate"
-              ></div>
+              <div className="d-flex flex-row" id="rate"></div>
             </div>
             <table className="" id="table">
               <tbody className="" id="table">
@@ -45,10 +39,12 @@ class Output extends React.Component {
                   <th className="table-head mode">genre</th>
                   <td className="mode">{this.props.data.Genre}</td>
                 </tr>
-                <tr id="director">
-                  <th className="table-head mode">director</th>
-                  <td className="mode">{this.props.data.Director}</td>
-                </tr>
+                {this.props.data.Director === "N/A" ? null : (
+                  <tr id="director">
+                    <th className="table-head mode">director</th>
+                    <td className="mode">{this.props.data.Director}</td>
+                  </tr>
+                )}
                 <tr id="writer">
                   <th className="table-head mode">writer</th>
                   <td className="mode">{this.props.data.Writer}</td>

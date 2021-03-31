@@ -1,5 +1,8 @@
 //bootstrap icons cdn
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 $border: 1px solid blue;
 @mixin form {
   display: block;
@@ -16,6 +19,15 @@ $border: 1px solid blue;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif !important;
+}
+
 //scrollbar style
 ::-webkit-scrollbar {
   width: 8px;
@@ -29,26 +41,25 @@ $border: 1px solid blue;
 ::-webkit-scrollbar-thumb:hover {
   background: #888;
 }
-
 //page style
 * {
   scrollbar-width: thin;
   text-transform: capitalize;
   .light-mode {
-    background: url(../asset/light.svg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: url(../asset/light.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
   }
   .text-light {
     color: white;
   }
   .dark-mode {
-    background: url(../asset//dark.svg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: url(../asset//dark.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
   }
   .text-dark {

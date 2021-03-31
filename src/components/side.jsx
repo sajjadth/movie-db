@@ -20,8 +20,8 @@ class Side extends React.Component {
               className="btn btn-light d-flex align-items-center justify-content-center m-1"
               id="side-mode-btn"
               onClick={() => store.dispatch(selectMode())}
-              >
-              <i className="bi bi-moon-fill mode"></i> 
+            >
+              <i className="bi bi-moon-fill mode"></i>
             </button>
           ) : this.props.mode === true ? (
             <button
@@ -34,12 +34,12 @@ class Side extends React.Component {
           ) : null}
           <a href="mailto:st.655.st@gmail.com" target="__blank">
             <button className={this.handleClasses()} id="side-mode-btn">
-              <i class="bi bi-envelope-fill"></i>
+              <i className="bi bi-envelope-fill"></i>
             </button>
           </a>
           <a href="https://github.com/sajjadth/" target="__blank">
             <button className={this.handleClasses()} id="side-mode-btn">
-              <i class="bi bi-github"></i>
+              <i className="bi bi-github"></i>
             </button>
           </a>
           <a
@@ -47,7 +47,7 @@ class Side extends React.Component {
             target="__blank"
           >
             <button className={this.handleClasses()} id="side-mode-btn">
-              <i class="bi bi-linkedin"></i>
+              <i className="bi bi-linkedin"></i>
             </button>
           </a>
         </div>
