@@ -60,7 +60,7 @@ class Input extends React.Component {
               </button>
             </form>*/}
             <form
-              className="col-10 d-flex flex-row"
+              className="ml-3 mr-3 w-100 d-flex flex-row"
               onSubmit={(e) => store.dispatch(submit(e))}
               id="form"
             >
@@ -74,7 +74,7 @@ class Input extends React.Component {
                   <Dropdown.Toggle
                     variant="flat"
                     id="dropdown-basic"
-                    className="rounded-0 h-100"
+                    className="rounded-0 h-100 d-flex justify-content-center align-items-center"
                   >
                     Select
                   </Dropdown.Toggle>
@@ -87,7 +87,7 @@ class Input extends React.Component {
                 </Dropdown>
                 <button
                   type="submit"
-                  className="btn button"
+                  className="btn button d-flex justify-content-center align-items-center"
                   id="submit"
                   onClick={(e) => store.dispatch(fetchData(e))}
                 >

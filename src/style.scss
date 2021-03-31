@@ -85,10 +85,11 @@ $border: 1px solid blue;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         width: 50px !important;
-        height: 38px !important;
+        height: 30px !important;
         //border: $border;
         @include form();
-      }/*
+      }
+      /*
       #submit:focus,
       #title:focus,
       .btn-flat:focus {
@@ -98,6 +99,7 @@ $border: 1px solid blue;
       .btn-flat {
         border-top: $border !important;
         border-bottom: $border !important;
+        height: 30px !important;
         @include form();
       }
       #title {
@@ -105,7 +107,7 @@ $border: 1px solid blue;
         border-bottom-right-radius: 0;
         border-top-left-radius: 25px;
         border-bottom-left-radius: 25px;
-        height: 38px !important;
+        height: 30px !important;
         //border: $border;
       }
     }
