@@ -20,8 +20,8 @@ class Side extends React.Component {
               className="btn btn-light d-flex align-items-center justify-content-center m-1"
               id="side-mode-btn"
               onClick={() => store.dispatch(selectMode())}
-            >
-              <i className="bi bi-brightness-high-fill mode"></i>
+              >
+              <i className="bi bi-moon-fill mode"></i> 
             </button>
           ) : this.props.mode === true ? (
             <button
@@ -29,7 +29,7 @@ class Side extends React.Component {
               id="side-mode-btn"
               onClick={() => store.dispatch(selectMode())}
             >
-              <i className="bi bi-moon-fill mode"></i>
+              <i className="bi bi-brightness-high-fill mode"></i>
             </button>
           ) : null}
           <a href="mailto:st.655.st@gmail.com" target="__blank">
