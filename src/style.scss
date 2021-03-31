@@ -47,20 +47,18 @@ h6 {
   text-transform: capitalize;
   .light-mode {
     background: url(../asset/light.svg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    height: 100%;
+    overflow: scroll;
   }
   .text-light {
     color: white;
   }
   .dark-mode {
     background: url(../asset//dark.svg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    height: 100%;
+    overflow: scroll;
   }
   .text-dark {
     color: #222222;
