@@ -1,6 +1,7 @@
 import React from "react";
 import $ from "jquery";
 import { connect } from "react-redux";
+import tipply from "tippy.js";
 
 class Output extends React.Component {
   render() {
@@ -21,7 +22,7 @@ class Output extends React.Component {
             </h1>
             <div className="d-flex flex-md-row flex-column">
               <div className="d-flex flex-row" id="details">
-                <p className="badge badge-pill badge-info m-1">
+                <p className="badge badge-pill badge-info m-1" id="rated">
                   {this.props.data.Rated}
                 </p>
                 <p className="badge badge-pill badge-info m-1">
@@ -78,19 +79,51 @@ class Output extends React.Component {
     const elm = ratings.forEach((rate) =>
       $("#rate").append(() => {
         return `
-          <p class="${classes} ${
+            <p class="${classes} ${
           rate.Source === "Internet Movie Database" ? "imdb text-dark" : ""
         } ${rate.Source === "Rotten Tomatoes" ? "rotten-tomatoes" : ""} ${
           rate.Source === "Metacritic" ? "metacritic" : ""
-        }" data-toggle="tooltip" data-placement="left" title="${
-          rate.Source
-        }" tabindex="0" >
-          ${rate.Value}
-          </p>
-  `;
+        }" id="${
+          rate.Source === "Internet Movie Database"
+            ? "imdb"
+            : rate.Source === "Rotten Tomatoes"
+            ? "rotten-tomatoes"
+            : rate.Source === "Metacritic"
+            ? "metacritic"
+            : null
+        }" >
+            ${rate.Value}
+            </p>
+    `;
       })
     );
-    return elm;
+    // let elm = ratings.forEach((rate) => {
+    //   return $("#rate").append(() => {
+    //     rate.Source === "Internet Movie Database"
+    //       ? `<p class="m-1 rate badge imdb text-dark">${rate.Value}</p>`
+    //       : null;
+    //   });
+    // });
+    // let imdbTooltip = withTooltip(elm, {
+    //   title: "IMDb",
+    //   position: "top",
+    //   trigger: "click",
+    // });
+    return (
+      elm,
+      tipply("#imdb", {
+        content: "IMDb",
+        animation:"scale"
+      }),
+      tipply("#metacritic", {
+        content: "Metacritic",
+        animation:"scale"
+      }),
+      tipply("#rotten-tomatoes", {
+        content: "Rotten Tomatoes",
+        animation:"scale"
+      })
+    );
   }
 }
 
