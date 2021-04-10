@@ -5,7 +5,12 @@ const searchSlice = createSlice({
   name: "search",
   initialState: {
     loading: "idle",
-    mode: false,
+    mode:
+      localStorage.getItem("mode") === "light"
+        ? false
+        : localStorage.getItem("mode") === "dark"
+        ? true
+        : null,
     data: [],
   },
   reducers: {
@@ -31,10 +36,12 @@ const searchSlice = createSlice({
       }
     },
     selectMode(state, action) {
-      if (state.mode === false) {
+      if (localStorage.getItem("mode") === "light") {
         state.mode = true;
-      } else if (state.mode === true) {
+        localStorage.setItem("mode", "dark");
+      } else if (localStorage.getItem("mode") === "dark") {
         state.mode = false;
+        localStorage.setItem("mode", "light");
       }
     },
   },
@@ -48,24 +55,20 @@ export const {
 } = searchSlice.actions;
 
 export const fetchData = (e) => async (dispatch) => {
+  dispatch(dataLoading());
+  e.preventDefault();
+  const title = "&t=" + $("#title").val();
+  //const year = "&y=" + $("#year").val();
+  var type = "&type=";
+  type +=
+    $("#dropdown-basic").text() === "Select" ? "" : $("#dropdown-basic").text();
+  const fetchLink = "https://www.omdbapi.com/?apikey=3bdcd579" + title + type;
 
-    dispatch(dataLoading());
-    e.preventDefault();
-    const title = "&t=" + $("#title").val();
-    //const year = "&y=" + $("#year").val();
-    var type = "&type=";
-    type +=
-      $("#dropdown-basic").text() === "Select"
-        ? ""
-        : $("#dropdown-basic").text();
-    const fetchLink = "https://www.omdbapi.com/?apikey=3bdcd579" + title + type;
-
-    const response = await fetch(fetchLink);
-    const data = await response.json();
-    if (response.status === 200) {
-      setTimeout(() => dispatch(dataReceived(data)), 3000);
-    }
-  
+  const response = await fetch(fetchLink);
+  const data = await response.json();
+  if (response.status === 200) {
+    setTimeout(() => dispatch(dataReceived(data)), 3000);
+  }
 };
 
 export const selectValue = (e) => (dispatch) => {

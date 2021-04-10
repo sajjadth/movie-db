@@ -24,25 +24,28 @@ class Main extends React.Component {
     );
   }
   componentDidMount() {
-    this.props.mode === false
+    localStorage.getItem("mode") === "light"
       ? $("body").removeClass("dark-mode") &&
         $("body").addClass("light-mode") &&
         $(".mode").addClass("text-dark") &&
         $(".mode").removeClass("text-light")
-      : this.props.mode === true
+      : localStorage.getItem("mode") === "dark"
       ? $("body").removeClass("light-mode") &&
         $("body").addClass("dark-mode") &&
         $(".mode").addClass("text-light") &&
         $(".mode").removeClass("text-dark")
       : null;
+    if (localStorage.getItem("mode") === null) {
+      localStorage.setItem("mode", "light");
+    }
   }
   componentDidUpdate() {
-    this.props.mode === false
+    localStorage.getItem("mode") === "light"
       ? $("body").removeClass("dark-mode") &&
         $("body").addClass("light-mode") &&
         $(".mode").addClass("text-dark") &&
         $(".mode").removeClass("text-light")
-      : this.props.mode === true
+      : localStorage.getItem("mode") === "dark"
       ? $("body").removeClass("light-mode") &&
         $("body").addClass("dark-mode") &&
         $(".mode").addClass("text-light") &&
