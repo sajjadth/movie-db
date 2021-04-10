@@ -24,6 +24,9 @@ class Main extends React.Component {
     );
   }
   componentDidMount() {
+    if (localStorage.getItem("mode") === null) {
+      localStorage.setItem("mode", "light");
+    }
     localStorage.getItem("mode") === "light"
       ? $("body").removeClass("dark-mode") &&
         $("body").addClass("light-mode") &&
@@ -35,9 +38,6 @@ class Main extends React.Component {
         $(".mode").addClass("text-light") &&
         $(".mode").removeClass("text-dark")
       : null;
-    if (localStorage.getItem("mode") === null) {
-      localStorage.setItem("mode", "light");
-    }
   }
   componentDidUpdate() {
     localStorage.getItem("mode") === "light"

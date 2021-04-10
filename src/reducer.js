@@ -10,7 +10,7 @@ const searchSlice = createSlice({
         ? false
         : localStorage.getItem("mode") === "dark"
         ? true
-        : null,
+        : false,
     data: [],
   },
   reducers: {
