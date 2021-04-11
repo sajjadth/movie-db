@@ -28,6 +28,13 @@ h6 {
   font-family: "Montserrat", sans-serif !important;
 }
 
+// .cat-logo {
+//   margin-right: 10px !important;
+// }
+th,
+td {
+  margin-bottom: 4px !important;
+}
 //scrollbar style
 ::-webkit-scrollbar {
   width: 8px;
@@ -136,8 +143,11 @@ h6 {
         background-color: #fa320a;
         color: white;
       }
-      #rate,
-      #details {
+      #awards {
+        background: #dfca4e !important;
+        color: #1a1717 !important;
+      }
+      .details {
         margin-left: -4px;
       }
       #table {
