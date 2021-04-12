@@ -90,7 +90,7 @@ class Output extends React.Component {
                     <td className="mode">{this.props.data.Awards}</td>
                   </tr>
                 )}
-                {this.props.data.BoxOffice === undefined ? null : (
+                {this.props.data.BoxOffice === undefined || "N/A" ? null : (
                   <tr id="boxbffice">
                     <th className="table-head mode">
                       {/* <i className="bi bi-cash cat-logo"></i> */}
